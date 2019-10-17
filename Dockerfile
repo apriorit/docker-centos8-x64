@@ -7,7 +7,7 @@ RUN yum -y update && yum clean all
 RUN yum install -y epel-release
 
 RUN yum groupinstall -y 'Development Tools'
-
+RUN dnf config-manager --enable PowerTools
 RUN yum install -y git subversion wget vim-common gdb boost-devel libicu-devel zlib-devel openssl-devel libuuid-devel cryptopp-devel redhat-lsb-core rpmrebuild gtest-devel bison valgrind which
 
 RUN yum clean all
